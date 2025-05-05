@@ -1,0 +1,25 @@
+print("Welcome to Harshit Kumar Restaurant.")
+menu={
+    "Pizza":500,
+    "Burger":120,
+    "Pasta":150,
+    "Coffee":100,
+    "Soft Drinks":90,
+}
+print("Pizza: Rs.500\nBurger: Rs.120\nPasta: Rs.150\nCoffee: Rs.100\nSoft Drinks: Rs.90")
+total_order=0
+item_1=input("Enter your first item to be ordered:")
+if item_1 in menu:
+    total_order+=menu[item_1]
+    print(f"Your first item {item_1} has been received in the order list.")
+else:
+    print(f"Your first item {item_1} is not available yet.")
+another_order=input("Do you want to order another item?:(Yes/No):")
+if (another_order=="Yes"):
+    item_2=input("Enter your second item to be ordered:")
+    if item_2 in menu:
+        total_order+=menu[item_2]
+        print(f"Your second item {item_2} has been received in the order list.")
+    else:
+        print(f"Your second item {item_2} is not available yet.")
+print(f"The total bill that you have to pay is Rs.{total_order}.")
